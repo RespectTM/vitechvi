@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ratlankių lyginimas">
+    <meta name="keywords" content="Ratlankių lyginimas, Ratlankių remontas, Ratlankių suvirinimas, Frezavimas, Virinimas, Ratlankių taisymas, Ratų balansavimas, Tekinimas, Argoninis suvirinimas">
+    <meta name="author" content="RespectTM">
+    <meta name="refresh" content="30">
+    <title>Vi-Tech-Vi</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="../assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="../assets/css/Article-List.css">
+    <link rel="stylesheet" href="../assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="../assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="../assets/css/Header-Dark.css">
+    <link rel="stylesheet" href="../assets/css/Map-Clean.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+    <div>
+        <div class="header-dark">
+            <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                <div class="container">
+                  <a class="navbar-brand" href="index.html">Vi-Tech-Vi</a>
+                  <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                    <div class="collapse navbar-collapse"
+                        id="navcol-1">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Paslaugos</a>
+                              <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="1.html">Ratlankių lyginimas</a>
+                                <a class="dropdown-item" role="presentation" href="2.html">Ratų balansavimas</a>
+                                <a class="dropdown-item" role="presentation" href="3.html">Frezavimas</a>
+                                <a class="dropdown-item" role="presentation" href="4.html">Tekinimas</a>
+                                <a class="dropdown-item" role="presentation" href="5.html">Argoninis suvirinimas</a>
+                                <a class="dropdown-item" role="presentation" href="6.html">Smėlio srovės apdirbimas</a>
+                                <a class="dropdown-item" role="presentation" href="7.html">Dažymas</a>
+                                <a class="dropdown-item" role="presentation" href="8.html">Atvykimas į namus</a>
+                              </div>
+                            </li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Kontaktai</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="duk.html">DUK</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="../forum">Forumas</a></li>
+                        </ul>
+                        <form class="form-inline mr-auto" target="_self"></form><span class="navbar-text"><a class="login">Darbo laikas: I-V: 9-18, VI: 9-14 &nbsp; &nbsp;</a><a class="login">Susisiekite su mumis: +37061423211</a></span></div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <br>
+    <div style="text-align: center;">
+    <h2>Mus rasite:</h2>
+    <br>
+    <h4>Gelvonų g. 9, Vilnius </h4>
+    <h4>tel. nr.: +37061423211</h4>
+    </div>
+    <br>
+    <a href="https://goo.gl/maps/32cqFgLNf4q" target="_blank"><div data-bs-parallax-bg="true" style="height:500px;background-image:url(../assets/img/zemelapis.jpg);background-position:center;background-size:cover;"></div></a>
+    <div style="text-align: center;">
+    <h3>Darbo laikas:</h3>
+    <p>Pirmadieni - Penktadieni 9:00-18:00</p>
+    <p>Šeštadieni 9:00-14:00</p>
+    <br><br>
+    </div>
+    <script>
+    function _(id){ return document.getElementById(id); }
+    function submitForm(){
+    	_("mybtn").disabled = true;
+    	_("status").innerHTML = 'please wait ...';
+    	var formdata = new FormData();
+    	formdata.append( "n", _("n").value );
+    	formdata.append( "e", _("e").value );
+    	formdata.append( "m", _("m").value );
+    	var ajax = new XMLHttpRequest();
+    	ajax.open( "POST", "sendmail.php" );
+    	ajax.onreadystatechange = function() {
+    		if(ajax.readyState == 4 && ajax.status == 200) {
+    			if(ajax.responseText == "success"){
+    				_("my_form").innerHTML = '<h2>Thanks, '+_("n").value+', your message has been sent.</h2>';
+    			} else {
+    				_("status").innerHTML = ajax.responseText;
+    				_("mybtn").disabled = false;
+    			}
+    		}
+    	}
+    	ajax.send( formdata );
+    }
+    </script>
+    <section class="container col-lg-6 col-xs-12" >
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="get-touch-heading" style="text-align:center;">
+          <h2>Susisiekite su mumis!</h2>
+          <br>
+        </div>
+      </div>
+    <form id="my_form" onsubmit="submitForm(); return false;">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="form-group">
+      <p><input class="form-control" id="n" placeholder="Vardas" required></p>
+    </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="form-group">
+      <p><input class="form-control" id="e" placeholder="Elektroninis paštas" type="email" required></p>
+    </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+    <div class="form-group">
+      <textarea class="form-control" id="m" placeholder="Žinutė..." rows="10" required></textarea>
+    </div>
+    </div>
+    <div class="submit">
+    <div class="col-md-12 col-sm-12 col-xs-12  text-center">
+    <input class="btn btn-default btn-xl sr-button text-center" id="mybtn" type="submit" value="Siūsti"> <span id="status"></span>
+    </div>
+    </div>
+    </form>
+    </section>
+    <br><br><br>
+    <div class="footer-dark">
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-6 col-md-3 item">
+                      <h3>Paslaugos</h3>
+                      <ul>
+                          <li><a href="1.html">Ratlankių lyginimas</a></li>
+                          <li><a href="2.html">Ratų balansavimas</a></li>
+                          <li><a href="3.html">Frezavimas</a></li>
+                          <li><a href="4.html">Tekinimas</a></li>
+                          <li><a href="5.html">Argoninis suvirinimas</a></li>
+                          <li><a href="6.html">Smėlio srovės apdirbimas</a></li>
+                          <li><a href="7.html">Dažymas</a></li>
+                          <li><a href="8.html">Atvykimas į namus.</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-6 col-md-3 item"><a href="https://goo.gl/maps/32cqFgLNf4q" target="_blank"><img style="border-radius: 25px;" src="../assets/img/1234.png"></div></a>
+                  <div class="col-md-6 item text">
+                      <h3>vi-tech-vi</h3>
+                      <p>Ratlankių lyginimas atliekamas  <span style="text-decoration: underline;">"VI-TECH-VI"</span> technologija, kuri garantuoja ypatingai aukštą kokybę, lyginant ratlankius, turinčius bet kokią deformaciją. Impulsinis, ikikritinis, kompensuotas spaudimas atstato molekulinį tinklą ir nuima tarpmolekulinį slėgį.</p>
+                  </div>
+                  <div class="col item social"><a href="https://www.facebook.com/Ratlankiu-lyginimas-vi-tech-vi-172130656768456/"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+              </div>
+              <p class="copyright">Vi-Tech-Vi © 2018</p>
+              <p class="copyright"> Designed by <a href="http://respecttm.sytes.net/">RespectTM</a></p>
+          </div>
+      </footer>
+    </div>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bs-animation.js"></script>
+</body>
+
+</html>
